@@ -1,0 +1,38 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+var arr:Array<Int>
+    //arr = Array<Int>(5){i->i*2}
+    arr=arrayOf(1,4,6,2,1,9,4,2,1,7,5);
+var str:String=""
+var index:Int=0
+var max:Int
+    for(i in 0..arr.count()-1)
+    {
+    str=str+arr[i]+", "
+    }
+    println(str);
+    max=arr[0];
+    for(i in 0..arr.count()-1)
+    {
+       if (max<arr[i]) 
+        {max=arr[i]
+            index=i}
+    }
+    println("______________________________________")
+    println("Max value: "+max)
+    var temp:Int
+    temp=arr[0]
+    arr[0]=max
+    arr[index]=temp
+    str=""
+    
+        for(i in 0..arr.count()-1)
+    {
+    str=str+arr[i]+", "
+    }
+    println(str);
+
+}
